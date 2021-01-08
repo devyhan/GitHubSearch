@@ -15,6 +15,25 @@
 		7E1A034825A81E8800C8785D /* GitHubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A034725A81E8800C8785D /* GitHubSearchUITests.swift */; };
 		7E1A035A25A81EB400C8785D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1A035925A81EB400C8785D /* Alamofire */; };
 		7E1A03EE25A828F500C8785D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E1A03F025A828F500C8785D /* Localizable.strings */; };
+		7E1A03F925A82A5400C8785D /* NetworkModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A03F825A82A5400C8785D /* NetworkModule.swift */; };
+		7E1A03FE25A82ACB00C8785D /* DummyServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A03FD25A82ACB00C8785D /* DummyServiceImpl.swift */; };
+		7E1A041625A82C2200C8785D /* LazyInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A041525A82C2200C8785D /* LazyInject.swift */; };
+		7E1A041B25A82C2D00C8785D /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A041A25A82C2D00C8785D /* Inject.swift */; };
+		7E1A042025A82C4000C8785D /* OptionalInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A041F25A82C4000C8785D /* OptionalInject.swift */; };
+		7E1A042525A82C5300C8785D /* ObservedInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A042425A82C5300C8785D /* ObservedInject.swift */; };
+		7E1A042A25A82C6300C8785D /* ContainerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A042925A82C6300C8785D /* ContainerContext.swift */; };
+		7E1A042F25A82C6E00C8785D /* DefinesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A042E25A82C6E00C8785D /* DefinesContainer.swift */; };
+		7E1A043425A82C8200C8785D /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A043325A82C8200C8785D /* DependencyContainer.swift */; };
+		7E1A043925A82C9400C8785D /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A043825A82C9400C8785D /* Component.swift */; };
+		7E1A043E25A82CA800C8785D /* ComponentIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A043D25A82CA800C8785D /* ComponentIdentifier.swift */; };
+		7E1A044325A82CB300C8785D /* ComponentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A044225A82CB300C8785D /* ComponentProtocol.swift */; };
+		7E1A044825A82CBD00C8785D /* Lifetime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A044725A82CBD00C8785D /* Lifetime.swift */; };
+		7E1A044D25A82CD000C8785D /* CommonModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A044C25A82CD000C8785D /* CommonModule.swift */; };
+		7E1A045225A82CD800C8785D /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A045125A82CD800C8785D /* ViewModelModule.swift */; };
+		7E1A045725A82CE500C8785D /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A045625A82CE500C8785D /* RepositoryModule.swift */; };
+		7E1A045C25A82CF400C8785D /* NetworkImplModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A045B25A82CF400C8785D /* NetworkImplModule.swift */; };
+		7E1A046125A82D1A00C8785D /* Qualifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A046025A82D1A00C8785D /* Qualifier.swift */; };
+		7E1A046625A82D2300C8785D /* DIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A046525A82D2300C8785D /* DIKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +68,25 @@
 		7E1A034925A81E8800C8785D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E1A03EF25A828F500C8785D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7E1A03F425A828FA00C8785D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E1A03F825A82A5400C8785D /* NetworkModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModule.swift; sourceTree = "<group>"; };
+		7E1A03FD25A82ACB00C8785D /* DummyServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyServiceImpl.swift; sourceTree = "<group>"; };
+		7E1A041525A82C2200C8785D /* LazyInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyInject.swift; sourceTree = "<group>"; };
+		7E1A041A25A82C2D00C8785D /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		7E1A041F25A82C4000C8785D /* OptionalInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalInject.swift; sourceTree = "<group>"; };
+		7E1A042425A82C5300C8785D /* ObservedInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInject.swift; sourceTree = "<group>"; };
+		7E1A042925A82C6300C8785D /* ContainerContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerContext.swift; sourceTree = "<group>"; };
+		7E1A042E25A82C6E00C8785D /* DefinesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinesContainer.swift; sourceTree = "<group>"; };
+		7E1A043325A82C8200C8785D /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		7E1A043825A82C9400C8785D /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		7E1A043D25A82CA800C8785D /* ComponentIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentIdentifier.swift; sourceTree = "<group>"; };
+		7E1A044225A82CB300C8785D /* ComponentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentProtocol.swift; sourceTree = "<group>"; };
+		7E1A044725A82CBD00C8785D /* Lifetime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifetime.swift; sourceTree = "<group>"; };
+		7E1A044C25A82CD000C8785D /* CommonModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModule.swift; sourceTree = "<group>"; };
+		7E1A045125A82CD800C8785D /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
+		7E1A045625A82CE500C8785D /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
+		7E1A045B25A82CF400C8785D /* NetworkImplModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImplModule.swift; sourceTree = "<group>"; };
+		7E1A046025A82D1A00C8785D /* Qualifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Qualifier.swift; sourceTree = "<group>"; };
+		7E1A046525A82D2300C8785D /* DIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				7E1A03C625A8262300C8785D /* Res */,
+				7E1A040225A82B9B00C8785D /* DI */,
+				7E1A03F625A82A0900C8785D /* Variants */,
 				7E1A032A25A81E8600C8785D /* GitHubSearchApp.swift */,
 				7E1A032C25A81E8600C8785D /* ContentView.swift */,
 				7E1A032E25A81E8800C8785D /* Assets.xcassets */,
@@ -150,6 +190,87 @@
 			children = (
 			);
 			path = "Perview Content";
+			sourceTree = "<group>";
+		};
+		7E1A03F525A829E300C8785D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A03F825A82A5400C8785D /* NetworkModule.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7E1A03F625A82A0900C8785D /* Variants */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A03F725A82A1A00C8785D /* Mock */,
+				7E1A03F525A829E300C8785D /* DI */,
+			);
+			path = Variants;
+			sourceTree = "<group>";
+		};
+		7E1A03F725A82A1A00C8785D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A03FD25A82ACB00C8785D /* DummyServiceImpl.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		7E1A040225A82B9B00C8785D /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A040325A82BA400C8785D /* Annotation */,
+				7E1A040425A82BAB00C8785D /* Container */,
+				7E1A040525A82BB300C8785D /* Component */,
+				7E1A040625A82BBF00C8785D /* Module */,
+				7E1A046025A82D1A00C8785D /* Qualifier.swift */,
+				7E1A046525A82D2300C8785D /* DIKit.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		7E1A040325A82BA400C8785D /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A041525A82C2200C8785D /* LazyInject.swift */,
+				7E1A041A25A82C2D00C8785D /* Inject.swift */,
+				7E1A041F25A82C4000C8785D /* OptionalInject.swift */,
+				7E1A042425A82C5300C8785D /* ObservedInject.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		7E1A040425A82BAB00C8785D /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A042925A82C6300C8785D /* ContainerContext.swift */,
+				7E1A042E25A82C6E00C8785D /* DefinesContainer.swift */,
+				7E1A043325A82C8200C8785D /* DependencyContainer.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		7E1A040525A82BB300C8785D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A043825A82C9400C8785D /* Component.swift */,
+				7E1A043D25A82CA800C8785D /* ComponentIdentifier.swift */,
+				7E1A044225A82CB300C8785D /* ComponentProtocol.swift */,
+				7E1A044725A82CBD00C8785D /* Lifetime.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		7E1A040625A82BBF00C8785D /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A044C25A82CD000C8785D /* CommonModule.swift */,
+				7E1A045125A82CD800C8785D /* ViewModelModule.swift */,
+				7E1A045625A82CE500C8785D /* RepositoryModule.swift */,
+				7E1A045B25A82CF400C8785D /* NetworkImplModule.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,8 +410,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E1A03FE25A82ACB00C8785D /* DummyServiceImpl.swift in Sources */,
+				7E1A046625A82D2300C8785D /* DIKit.swift in Sources */,
+				7E1A043925A82C9400C8785D /* Component.swift in Sources */,
 				7E1A032D25A81E8600C8785D /* ContentView.swift in Sources */,
+				7E1A042F25A82C6E00C8785D /* DefinesContainer.swift in Sources */,
+				7E1A041B25A82C2D00C8785D /* Inject.swift in Sources */,
+				7E1A045225A82CD800C8785D /* ViewModelModule.swift in Sources */,
 				7E1A032B25A81E8600C8785D /* GitHubSearchApp.swift in Sources */,
+				7E1A043425A82C8200C8785D /* DependencyContainer.swift in Sources */,
+				7E1A046125A82D1A00C8785D /* Qualifier.swift in Sources */,
+				7E1A043E25A82CA800C8785D /* ComponentIdentifier.swift in Sources */,
+				7E1A045725A82CE500C8785D /* RepositoryModule.swift in Sources */,
+				7E1A03F925A82A5400C8785D /* NetworkModule.swift in Sources */,
+				7E1A041625A82C2200C8785D /* LazyInject.swift in Sources */,
+				7E1A045C25A82CF400C8785D /* NetworkImplModule.swift in Sources */,
+				7E1A044825A82CBD00C8785D /* Lifetime.swift in Sources */,
+				7E1A042A25A82C6300C8785D /* ContainerContext.swift in Sources */,
+				7E1A044D25A82CD000C8785D /* CommonModule.swift in Sources */,
+				7E1A042525A82C5300C8785D /* ObservedInject.swift in Sources */,
+				7E1A042025A82C4000C8785D /* OptionalInject.swift in Sources */,
+				7E1A044325A82CB300C8785D /* ComponentProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
