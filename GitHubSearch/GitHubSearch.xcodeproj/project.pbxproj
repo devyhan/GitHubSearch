@@ -14,6 +14,7 @@
 		7E1A033D25A81E8800C8785D /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A033C25A81E8800C8785D /* GitHubSearchTests.swift */; };
 		7E1A034825A81E8800C8785D /* GitHubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1A034725A81E8800C8785D /* GitHubSearchUITests.swift */; };
 		7E1A035A25A81EB400C8785D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7E1A035925A81EB400C8785D /* Alamofire */; };
+		7E1A03EE25A828F500C8785D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E1A03F025A828F500C8785D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		7E1A034325A81E8800C8785D /* GitHubSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1A034725A81E8800C8785D /* GitHubSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchUITests.swift; sourceTree = "<group>"; };
 		7E1A034925A81E8800C8785D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E1A03EF25A828F500C8785D /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7E1A03F425A828FA00C8785D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 		7E1A032925A81E8600C8785D /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7E1A03C625A8262300C8785D /* Res */,
 				7E1A032A25A81E8600C8785D /* GitHubSearchApp.swift */,
 				7E1A032C25A81E8600C8785D /* ContentView.swift */,
 				7E1A032E25A81E8800C8785D /* Assets.xcassets */,
@@ -130,6 +134,22 @@
 				7E1A034925A81E8800C8785D /* Info.plist */,
 			);
 			path = GitHubSearchUITests;
+			sourceTree = "<group>";
+		};
+		7E1A03C625A8262300C8785D /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				7E1A03C725A8262900C8785D /* Perview Content */,
+				7E1A03F025A828F500C8785D /* Localizable.strings */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		7E1A03C725A8262900C8785D /* Perview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Perview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +240,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 7E1A031E25A81E8600C8785D;
 			packageReferences = (
@@ -242,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1A033225A81E8800C8785D /* Preview Assets.xcassets in Resources */,
+				7E1A03EE25A828F500C8785D /* Localizable.strings in Resources */,
 				7E1A032F25A81E8800C8785D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +324,18 @@
 			targetProxy = 7E1A034425A81E8800C8785D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E1A03F025A828F500C8785D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E1A03EF25A828F500C8785D /* ko */,
+				7E1A03F425A828FA00C8785D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7E1A034A25A81E8800C8785D /* Dev */ = {
