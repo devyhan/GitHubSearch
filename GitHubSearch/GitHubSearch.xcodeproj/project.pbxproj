@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7ED0DF2F25B522DF00C54C47 /* GitHubSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF2E25B522DF00C54C47 /* GitHubSearchApp.swift */; };
 		7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3025B522DF00C54C47 /* ContentView.swift */; };
 		7ED0DF3325B522E100C54C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3225B522E100C54C47 /* Assets.xcassets */; };
 		7ED0DF3625B522E100C54C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3525B522E100C54C47 /* Preview Assets.xcassets */; };
 		7ED0DF4125B522E100C54C47 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF4025B522E100C54C47 /* GitHubSearchTests.swift */; };
 		7ED0DF4C25B522E100C54C47 /* GitHubSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF4B25B522E100C54C47 /* GitHubSearchUITests.swift */; };
+		7ED0DF6A25B52D9100C54C47 /* GitHubSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF2E25B522DF00C54C47 /* GitHubSearchApp.swift */; };
+		7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF6F25B5522B00C54C47 /* DefaultButton.swift */; };
+		7ED0DF7925B5527400C54C47 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF7825B5527400C54C47 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		7ED0DF4725B522E100C54C47 /* GitHubSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED0DF4B25B522E100C54C47 /* GitHubSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchUITests.swift; sourceTree = "<group>"; };
 		7ED0DF4D25B522E100C54C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ED0DF6F25B5522B00C54C47 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		7ED0DF7825B5527400C54C47 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,9 @@
 		7ED0DF2D25B522DF00C54C47 /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7ED0DF6125B5240900C54C47 /* Model */,
+				7ED0DF6025B5240400C54C47 /* ViewModel */,
+				7ED0DF5F25B523FF00C54C47 /* View */,
 				7ED0DF2E25B522DF00C54C47 /* GitHubSearchApp.swift */,
 				7ED0DF3025B522DF00C54C47 /* ContentView.swift */,
 				7ED0DF3225B522E100C54C47 /* Assets.xcassets */,
@@ -128,6 +135,53 @@
 				7ED0DF4D25B522E100C54C47 /* Info.plist */,
 			);
 			path = GitHubSearchUITests;
+			sourceTree = "<group>";
+		};
+		7ED0DF5F25B523FF00C54C47 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7ED0DF6225B5240E00C54C47 /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7ED0DF6025B5240400C54C47 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7ED0DF6325B5258500C54C47 /* PropertyWrapper */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7ED0DF6125B5240900C54C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7ED0DF6225B5240E00C54C47 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				7ED0DF6E25B550D900C54C47 /* Button */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		7ED0DF6325B5258500C54C47 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		7ED0DF6E25B550D900C54C47 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				7ED0DF6F25B5522B00C54C47 /* DefaultButton.swift */,
+				7ED0DF7825B5527400C54C47 /* ButtonView.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED0DF6A25B52D9100C54C47 /* GitHubSearchApp.swift in Sources */,
+				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
+				7ED0DF7925B5527400C54C47 /* ButtonView.swift in Sources */,
 				7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */,
-				7ED0DF2F25B522DF00C54C47 /* GitHubSearchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
