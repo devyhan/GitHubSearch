@@ -68,17 +68,36 @@ struct DefaultButton: View {
   }
 }
 
-// MARK: - ButtonView
+// MARK: - View
 
 struct DefaultButtonView: View {
   var body: some View {
-    VStack {
+    VStack(alignment: .leading) {
+      Spacer()
+
       DefaultButton(title: "Button") {
         print("BUTTON")
       }
       DefaultButton(title: "Button", backgroundColor: Color.white, foregroundColor: Color.black) {
         print("BUTTON")
       }
+      
+      Spacer()
+      
+      Text("disabled: true")
+        .bold()
+        .padding(.leading, 20)
+      
+      DefaultButton(title: "Button", disabled: true) {
+        print("BUTTON")
+      }
+      DefaultButton(title: "Button", disabled: true, backgroundColor: Color.white, foregroundColor: Color.black) {
+        print("BUTTON")
+      }
+      
+      Spacer()
+      
+      .navigationTitle("Default")
     }
   }
 }
