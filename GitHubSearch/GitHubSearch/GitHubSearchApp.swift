@@ -7,10 +7,11 @@
 
 import os
 import SwiftUI
-import MapKit
+import CoreLocation
 
 @main
 struct GitHubSearchApp: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
   private let osLog = OSLog(subsystem: "user locale info", category: "GitHubSearch")
   
   init() {
@@ -30,5 +31,15 @@ struct GitHubSearchApp: App {
     WindowGroup {
       ContentView()
     }
+  }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate, CLLocationManagerDelegate {
+  private var locationManager: CLLocationManager!
+  private var latitude, longitude: Double?
+  
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    
+    return true
   }
 }
