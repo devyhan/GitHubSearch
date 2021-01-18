@@ -13,7 +13,9 @@ struct GroupHeader: View {
   
   let title: String
   
-  init(title: String, backgroundColor: Color = Color.white, forgroundColor: Color = Color.black) {
+  init(title: String,
+       backgroundColor: Color = Color.white,
+       forgroundColor: Color = Color.black) {
     self.backgroundColor = backgroundColor
     self.forgroundColor = forgroundColor
     self.title = title
@@ -47,6 +49,16 @@ struct ContentView: View {
             destination: ButtonView(),
             label: {
               Text("Button")
+            })
+          NavigationLink(
+            destination: ButtonView(),
+            label: {
+              Text("TextField")
+            })
+          NavigationLink(
+            destination: ButtonView(),
+            label: {
+              Text("Indicator")
             })
         }.listStyle(GroupedListStyle())
         Section(header: GroupHeader(title: "feature")) {
