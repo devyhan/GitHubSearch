@@ -13,29 +13,39 @@ struct TabNavigation: View {
   @ObservedObject var tabController = TabController(actionIndex: 1)
   
   var body: some View {
+
     TabView(selection: $tabController.index) {
-      FirstView()
-        .tabItem {
-          Image(systemName: "1.circle")
-          Text("First")
-        }
-        .tag(0)
-      
-      Spacer()
-        .tabItem {
-          Image(systemName: "plus.circle")
-          Text("center")
-        }
-        .tag(1)
-      
-      SecondView()
-        .tabItem {
-          Image(systemName: "2.circle")
-          Text("Second")
-        }
-        .tag(2)
+      NavigationView {
+        FirstView()
+      }
+      .tabItem {
+        Image(systemName: "1.circle")
+        Text("First")
+      }
+      .tag(0)
+
+      NavigationView {
+        Spacer()
+      }
+      .tabItem {
+        Image(systemName: "plus.circle")
+        Text("center")
+      }
+      .tag(1)
+
+      NavigationView {
+        SecondView()
+      }
+      .tabItem {
+        Image(systemName: "2.circle")
+        Text("Second")
+      }
+      .tag(2)
+
     }
-    .navigationTitle("Tab Navigation")
+    .navigationBarBackButtonHidden(false)
+    .navigationBarTitle("SwiftUI", displayMode: .inline)
+    .navigationBarHidden(true)
     .fullScreenCover(isPresented: $tabController.isActionTab, content: {
       PostContainer()
     })
