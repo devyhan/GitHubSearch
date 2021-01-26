@@ -41,6 +41,8 @@ struct GroupHeader: View {
 }
 
 struct ContentView: View {
+  @State private var isPresented = false
+  
   var body: some View {
     NavigationView {
       List {
@@ -67,11 +69,22 @@ struct ContentView: View {
             label: {
               Text("Login")
             })
-          NavigationLink(
-            destination: TabNavigation(),
-            label: {
-              Text("Navigation")
-            })
+          
+          HStack {
+            Button("Navigation") {
+              isPresented.toggle()
+            }
+            .fullScreenCover(isPresented: $isPresented) {
+              TabNavigation()
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+              .font(.system(size: 14))
+              .opacity(0.3)
+          }
+          
         }.listStyle(GroupedListStyle())
       }
       .navigationBarTitle("SwiftUI")

@@ -9,33 +9,52 @@ import SwiftUI
 
 struct TabNavigation: View {
   @State var isActionTab: Bool = false
-//  @State var tab:
+  //  @State var tab:
   @ObservedObject var tabController = TabController(actionIndex: 1)
+  @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
+    
     TabView(selection: $tabController.index) {
-      FirstView()
-        .tabItem {
-          Image(systemName: "1.circle")
-          Text("First")
-        }
-        .tag(0)
+      NavigationView {
+        FirstView()
+          .navigationBarItems(leading: Button("Dismiss") {
+            presentationMode.wrappedValue.dismiss()
+          })
+      }
+      .tabItem {
+        Image(systemName: "1.circle")
+        Text("First")
+      }
+      .tag(0)
       
-      Spacer()
-        .tabItem {
-          Image(systemName: "plus.circle")
-          Text("center")
-        }
-        .tag(1)
+      NavigationView {
+        Spacer()
+          .navigationBarItems(leading: Button("Dismiss") {
+            presentationMode.wrappedValue.dismiss()
+          })
+      }
+      .tabItem {
+        Image(systemName: "plus.circle")
+        Text("center")
+      }
+      .tag(1)
       
-      SecondView()
-        .tabItem {
-          Image(systemName: "2.circle")
-          Text("Second")
-        }
-        .tag(2)
+      NavigationView {
+        SecondView()
+          .navigationBarItems(leading: Button("Dismiss") {
+            presentationMode.wrappedValue.dismiss()
+          })
+      }
+      .tabItem {
+        Image(systemName: "2.circle")
+        Text("Second")
+      }
+      .tag(2)
+      
     }
-    .navigationTitle("Tab Navigation")
+    .navigationBarBackButtonHidden(false)
+    .navigationBarTitle("SwiftUI", displayMode: .inline)
     .fullScreenCover(isPresented: $tabController.isActionTab, content: {
       PostContainer()
     })
@@ -53,7 +72,7 @@ struct PostContainer: View {
   
   var body: some View {
     Button("Back", action: {
-        presentationMode.wrappedValue.dismiss()
+      presentationMode.wrappedValue.dismiss()
     })
   }
 }

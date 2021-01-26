@@ -8,8 +8,20 @@
 import SwiftUI
 
 struct FirstView: View {
+  @State var count: Int = 0
   var body: some View {
-    Text("First")
+    VStack {
+      NavigationLink("Go to Second", destination: SecondView())
+      
+      Spacer()
+      
+      Button("Plus", action: {
+        count = count + 1
+      })
+      Text("\(count)")
+      
+      Spacer()
+    }
   }
 }
 
