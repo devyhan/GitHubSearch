@@ -41,6 +41,8 @@ struct GroupHeader: View {
 }
 
 struct ContentView: View {
+  @State private var isPresented = false
+  
   var body: some View {
     NavigationView {
       List {
@@ -67,6 +69,13 @@ struct ContentView: View {
             label: {
               Text("Login")
             })
+          Button("Navigation") {
+            isPresented.toggle()
+          }
+          .fullScreenCover(isPresented: $isPresented) {
+            TabNavigation()
+          }
+          
           NavigationLink(
             destination: TabNavigation(),
             label: {
