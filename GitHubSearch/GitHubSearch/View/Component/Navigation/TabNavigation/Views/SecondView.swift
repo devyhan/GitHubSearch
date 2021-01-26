@@ -19,6 +19,8 @@ struct SecondView: View {
           count = count + 1
       })
       Text("\(count)")
+      
+      Spacer()
     }
   }
 }

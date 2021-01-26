@@ -19,6 +19,8 @@ struct FirstView: View {
           count = count + 1
       })
       Text("\(count)")
+      
+      Spacer()
     }
 //    .navigationBarBackButtonHidden(true)
   }

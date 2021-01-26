@@ -69,18 +69,22 @@ struct ContentView: View {
             label: {
               Text("Login")
             })
-          Button("Navigation") {
-            isPresented.toggle()
-          }
-          .fullScreenCover(isPresented: $isPresented) {
-            TabNavigation()
+          
+          HStack {
+            Button("Navigation") {
+              isPresented.toggle()
+            }
+            .fullScreenCover(isPresented: $isPresented) {
+              TabNavigation()
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+              .font(.system(size: 14))
+              .opacity(0.3)
           }
           
-          NavigationLink(
-            destination: TabNavigation(),
-            label: {
-              Text("Navigation")
-            })
         }.listStyle(GroupedListStyle())
       }
       .navigationBarTitle("SwiftUI")
