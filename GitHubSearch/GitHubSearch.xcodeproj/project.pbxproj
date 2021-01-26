@@ -10,6 +10,10 @@
 		7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C051B25B65C1E00118A70 /* HorizontalLine.swift */; };
 		7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C052025B65D9000118A70 /* UnderlineTextField.swift */; };
 		7E0C053625B65EDC00118A70 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C053525B65EDC00118A70 /* UserViewModel.swift */; };
+		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
+		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
+		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
+		7EC5F63C25BFF42200CC4D1A /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */; };
 		7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3025B522DF00C54C47 /* ContentView.swift */; };
 		7ED0DF3325B522E100C54C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3225B522E100C54C47 /* Assets.xcassets */; };
 		7ED0DF3625B522E100C54C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3525B522E100C54C47 /* Preview Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		7E0C051B25B65C1E00118A70 /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
 		7E0C052025B65D9000118A70 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		7E0C053525B65EDC00118A70 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
+		7EC5F62625BFEACD00CC4D1A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		7EC5F63425BFF39200CC4D1A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		7ED0DF2B25B522DF00C54C47 /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED0DF2E25B522DF00C54C47 /* GitHubSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchApp.swift; sourceTree = "<group>"; };
 		7ED0DF3025B522DF00C54C47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +105,41 @@
 				7E0C052025B65D9000118A70 /* UnderlineTextField.swift */,
 			);
 			path = Underline;
+			sourceTree = "<group>";
+		};
+		7EC5F61B25BFE9AC00CC4D1A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5F61C25BFE9D300CC4D1A /* TabNavigation */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7EC5F61C25BFE9D300CC4D1A /* TabNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5F63325BFF38500CC4D1A /* Controller */,
+				7EC5F62525BFEAC100CC4D1A /* Views */,
+				7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */,
+			);
+			path = TabNavigation;
+			sourceTree = "<group>";
+		};
+		7EC5F62525BFEAC100CC4D1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5F62625BFEACD00CC4D1A /* FirstView.swift */,
+				7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7EC5F63325BFF38500CC4D1A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7EC5F63425BFF39200CC4D1A /* TabController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		7ED0DF2225B522DF00C54C47 = {
@@ -187,6 +230,7 @@
 		7ED0DF6225B5240E00C54C47 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				7EC5F61B25BFE9AC00CC4D1A /* Navigation */,
 				7E0C051A25B65BB700118A70 /* TextField */,
 				7ED0DF6E25B550D900C54C47 /* Button */,
 			);
@@ -342,8 +386,12 @@
 				7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */,
 				7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */,
 				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
+				7EC5F63C25BFF42200CC4D1A /* TabNavigation.swift in Sources */,
+				7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */,
 				7ED0DF7925B5527400C54C47 /* ButtonView.swift in Sources */,
+				7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */,
 				7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */,
+				7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */,
 				7E0C053625B65EDC00118A70 /* UserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,7 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = X6LA4P7TFP;
+				DEVELOPMENT_TEAM = PN6VVTK7DV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -511,7 +559,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,7 +573,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = X6LA4P7TFP;
+				DEVELOPMENT_TEAM = PN6VVTK7DV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -533,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

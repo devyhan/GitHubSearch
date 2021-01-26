@@ -67,6 +67,11 @@ struct ContentView: View {
             label: {
               Text("Login")
             })
+          NavigationLink(
+            destination: TabNavigation(),
+            label: {
+              Text("Navigation")
+            })
         }.listStyle(GroupedListStyle())
       }
       .navigationBarTitle("SwiftUI")
