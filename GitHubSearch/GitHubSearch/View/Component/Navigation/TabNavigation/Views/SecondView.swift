@@ -16,7 +16,7 @@ struct SecondView: View {
       Spacer()
       
       Button("Plus", action: {
-          count = count + 1
+        count = count + 1
       })
       Text("\(count)")
       

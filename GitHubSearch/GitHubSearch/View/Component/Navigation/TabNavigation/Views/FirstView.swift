@@ -16,13 +16,12 @@ struct FirstView: View {
       Spacer()
       
       Button("Plus", action: {
-          count = count + 1
+        count = count + 1
       })
       Text("\(count)")
       
       Spacer()
     }
-//    .navigationBarBackButtonHidden(true)
   }
 }
 
