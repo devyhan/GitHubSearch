@@ -13,8 +13,8 @@
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
 		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
 		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
-		7EC5F63C25BFF42200CC4D1A /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */; };
-		7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3025B522DF00C54C47 /* ContentView.swift */; };
+		7EC5F64B25C12EAB00CC4D1A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3025B522DF00C54C47 /* ContentView.swift */; };
+		7EC5F66025C1416400CC4D1A /* TabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */; };
 		7ED0DF3325B522E100C54C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3225B522E100C54C47 /* Assets.xcassets */; };
 		7ED0DF3625B522E100C54C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED0DF3525B522E100C54C47 /* Preview Assets.xcassets */; };
 		7ED0DF4125B522E100C54C47 /* GitHubSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED0DF4025B522E100C54C47 /* GitHubSearchTests.swift */; };
@@ -383,14 +383,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED0DF6A25B52D9100C54C47 /* GitHubSearchApp.swift in Sources */,
+				7EC5F64B25C12EAB00CC4D1A /* ContentView.swift in Sources */,
 				7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */,
 				7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */,
+				7EC5F66025C1416400CC4D1A /* TabNavigation.swift in Sources */,
 				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
-				7EC5F63C25BFF42200CC4D1A /* TabNavigation.swift in Sources */,
 				7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */,
 				7ED0DF7925B5527400C54C47 /* ButtonView.swift in Sources */,
 				7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */,
-				7ED0DF3125B522DF00C54C47 /* ContentView.swift in Sources */,
 				7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */,
 				7E0C053625B65EDC00118A70 /* UserViewModel.swift in Sources */,
 			);

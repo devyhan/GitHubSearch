@@ -9,16 +9,25 @@ import SwiftUI
 
 struct SecondView: View {
   @State var count: Int = 0
+
+  
   var body: some View {
     VStack {
-      NavigationLink("Go to First", destination: FirstView())
+//      NavigationLink("Go to First", destination: FirstView(isParented: ))
       
       Spacer()
       
-      Button("Plus", action: {
-        count = count + 1
-      })
       Text("\(count)")
+        .font(.system(size: 100, weight: .bold))
+      
+      HStack {
+        Button("Plus", action: {
+          count = count + 1
+        })
+        Button("Minus", action: {
+          count = count - 1
+        })
+      }
       
       Spacer()
     }

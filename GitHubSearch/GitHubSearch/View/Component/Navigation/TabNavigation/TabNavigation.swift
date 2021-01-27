@@ -9,15 +9,18 @@ import SwiftUI
 
 struct TabNavigation: View {
   @State var isActionTab: Bool = false
+  @State var isToggle: Bool = false
   //  @State var tab:
   @ObservedObject var tabController = TabController(actionIndex: 1)
   @Environment(\.presentationMode) var presentationMode
   
+  let window = UIScreen.main.bounds
+
   var body: some View {
     
     TabView(selection: $tabController.index) {
       NavigationView {
-        FirstView()
+        FirstView(isToggle: $isToggle)
           .navigationBarItems(leading: Button("Dismiss") {
             presentationMode.wrappedValue.dismiss()
           })
@@ -58,6 +61,9 @@ struct TabNavigation: View {
     .fullScreenCover(isPresented: $tabController.isActionTab, content: {
       PostContainer()
     })
+    .frame(width: self.window.width, height: isToggle == true ? self.window.height + 160 : self.window.height)
+    .edgesIgnoringSafeArea(.all)
+    .border(Color.yellow, width: 1)
   }
 }
 

@@ -7,7 +7,7 @@
 
 import Combine
 
-class TabController: ObservableObject {
+final class TabController: ObservableObject {
   @Published var isActionTab: Bool = false
   var actionIndex: Int?
   var index: Int = 0 {
@@ -24,3 +24,4 @@ class TabController: ObservableObject {
       self.actionIndex = actionIndex
   }
 }
+

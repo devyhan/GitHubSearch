@@ -42,7 +42,7 @@ struct GroupHeader: View {
 
 struct ContentView: View {
   @State private var isPresented = false
-  
+
   var body: some View {
     NavigationView {
       List {
@@ -91,6 +91,11 @@ struct ContentView: View {
     }
   }
 }
+
+class Setting: ObservableObject {
+  @Published var toggle = false
+}
+
 
 // MARK: - Preview
 
