@@ -10,6 +10,7 @@
 		7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C051B25B65C1E00118A70 /* HorizontalLine.swift */; };
 		7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C052025B65D9000118A70 /* UnderlineTextField.swift */; };
 		7E0C053625B65EDC00118A70 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C053525B65EDC00118A70 /* UserViewModel.swift */; };
+		7E2C47FC25C3A0150028A019 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C47FB25C3A0150028A019 /* RegularExpression.swift */; };
 		7E6EDCD525C27E6E00C132A1 /* Example_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EDCD425C27E6E00C132A1 /* Example_01.swift */; };
 		7E6EDCDD25C2BD0F00C132A1 /* Test_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6EDCDC25C2BD0F00C132A1 /* Test_01.swift */; };
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
@@ -47,6 +48,7 @@
 		7E0C051B25B65C1E00118A70 /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
 		7E0C052025B65D9000118A70 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		7E0C053525B65EDC00118A70 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		7E2C47FB25C3A0150028A019 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegularExpression.swift; path = GitHubSearch/View/Practice/RegularExpression.swift; sourceTree = SOURCE_ROOT; };
 		7E6EDCD425C27E6E00C132A1 /* Example_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_01.swift; sourceTree = "<group>"; };
 		7E6EDCDC25C2BD0F00C132A1 /* Test_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_01.swift; sourceTree = "<group>"; };
 		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		7ED0DF6325B5258500C54C47 /* PropertyWrapper */ = {
 			isa = PBXGroup;
 			children = (
+				7E2C47FB25C3A0150028A019 /* RegularExpression.swift */,
 			);
 			path = PropertyWrapper;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				7ED0DF7925B5527400C54C47 /* ButtonView.swift in Sources */,
 				7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */,
 				7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */,
+				7E2C47FC25C3A0150028A019 /* RegularExpression.swift in Sources */,
 				7E0C053625B65EDC00118A70 /* UserViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = PN6VVTK7DV;
+				DEVELOPMENT_TEAM = X6LA4P7TFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -575,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = PN6VVTK7DV;
+				DEVELOPMENT_TEAM = X6LA4P7TFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -597,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
