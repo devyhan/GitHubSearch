@@ -28,7 +28,7 @@ import Foundation
 */
 enum Regex {
   // 아이디
-  @RegularyWrapper(filter: RegularExpression.id)
+  @RegularyWrapper(filter: RegularExpression.id) 
   static var id: String
   
   // 이메일
