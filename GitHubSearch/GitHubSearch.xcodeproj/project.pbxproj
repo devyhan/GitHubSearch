@@ -571,7 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = PN6VVTK7DV;
+				DEVELOPMENT_TEAM = X6LA4P7TFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -579,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -593,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GitHubSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = PN6VVTK7DV;
+				DEVELOPMENT_TEAM = X6LA4P7TFP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GitHubSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -601,7 +601,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousol.GitHubSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devyhan93.GitHubSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
