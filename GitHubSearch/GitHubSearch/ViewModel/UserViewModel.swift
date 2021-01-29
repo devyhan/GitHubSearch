@@ -55,6 +55,14 @@ class UserViewModel: ObservableObject {
       .eraseToAnyPublisher()
   }
   
+  private var isTextFieldValidPublisher: AnyPublisher<Bool, Never> {
+    Publishers.CombineLatest3(isUserIdValidPublisher, isUserEmailValidPUblisher, isUserPasswordValidPUblisher)
+      .map { id, email, pw in
+        id && email && pw
+      }
+      .eraseToAnyPublisher()
+  }
+  
   init() {
     isUserIdValidPublisher
       .receive(on: RunLoop.main)
@@ -80,6 +88,11 @@ class UserViewModel: ObservableObject {
         return result ? "" : "패스워드는 대문자, 특수문자를 포함하여 최소 6글자 이상이여야 합니다."
       }
       .assign(to: \.userPasswordMessage, on: self)
+      .store(in: &cancellableSet)
+    
+    isTextFieldValidPublisher
+      .receive(on: RunLoop.main)
+      .assign(to: \.isValid, on: self)
       .store(in: &cancellableSet)
   }
 }

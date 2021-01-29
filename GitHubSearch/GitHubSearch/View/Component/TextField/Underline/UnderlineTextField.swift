@@ -47,6 +47,7 @@ struct UnderlineTextField_Example: View {
       Text("TextField")
         .fontWeight(.bold)
         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+        .foregroundColor(userViewModel.isValid ? .green : .none)
       
       Spacer()
       
