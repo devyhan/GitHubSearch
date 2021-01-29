@@ -53,7 +53,7 @@ struct ContentView: View {
               Text("Button")
             })
           NavigationLink(
-            destination: ButtonView(),
+            destination: UnderlineTextField_Example(),
             label: {
               Text("TextField")
             })
@@ -85,14 +85,6 @@ struct ContentView: View {
               .opacity(0.3)
           }
           
-        }.listStyle(GroupedListStyle())
-        
-        Section(header: GroupHeader(title: "performance test")) {
-          NavigationLink(
-            destination: Test_01(),
-            label: {
-              Text("Test_01")
-            })
         }.listStyle(GroupedListStyle())
       }
       .navigationBarTitle("SwiftUI")

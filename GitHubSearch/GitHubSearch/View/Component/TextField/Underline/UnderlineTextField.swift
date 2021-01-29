@@ -57,6 +57,13 @@ struct UnderlineTextField_Example: View {
         .fontWeight(.bold)
         .foregroundColor(.red)
       
+      UnderlineTextField(text: $userViewModel.useremail, placeholder: Text("이메일"))
+        .padding(.top, 32.0)
+      
+      Text(userViewModel.userEmailMessage)
+        .fontWeight(.bold)
+        .foregroundColor(.red)
+      
       SecureUnderlineTextField(text: $userViewModel.password, placeholder: Text("비밀번호"))
         .padding(.top, 32.0)
       
@@ -70,12 +77,12 @@ struct UnderlineTextField_Example: View {
 }
 #endif
 
-// MARK: - Preview
+ // MARK: - Preview
 
-//struct UnderlineTextField_Previews: PreviewProvider {
-//  static var previews: some View {
-//    UnderlineTextField_Example()
-//  }
-//
+struct UnderlineTextField_Previews: PreviewProvider {
+  static var previews: some View {
+    UnderlineTextField_Example()
+  }
+}
 
 

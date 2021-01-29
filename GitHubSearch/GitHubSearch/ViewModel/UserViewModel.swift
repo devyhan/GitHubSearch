@@ -11,10 +11,12 @@ import Combine
 class UserViewModel: ObservableObject {
   // input
   @Published var username = ""
+  @Published var useremail = ""
   @Published var password = ""
   
   // output
   @Published var userIdMessage = ""
+  @Published var userEmailMessage = ""
   @Published var userPasswordMessage = ""
   @Published var isValid = false
   
@@ -25,7 +27,30 @@ class UserViewModel: ObservableObject {
       .debounce(for: 0.8, scheduler: RunLoop.main)
       .removeDuplicates()
       .map { input in
-        return true
+        Regex.id = input
+        return Regex.$id
+      }
+      .eraseToAnyPublisher()
+  }
+  
+  private var isUserEmailValidPUblisher: AnyPublisher<Bool, Never> {
+    $useremail
+      .debounce(for: 0.8, scheduler: RunLoop.main)
+      .removeDuplicates()
+      .map { input in
+        Regex.email = input
+        return Regex.$email
+      }
+      .eraseToAnyPublisher()
+  }
+  
+  private var isUserPasswordValidPUblisher: AnyPublisher<Bool, Never> {
+    $password
+      .debounce(for: 0.8, scheduler: RunLoop.main)
+      .removeDuplicates()
+      .map { input in
+        Regex.pw = input
+        return Regex.$pw
       }
       .eraseToAnyPublisher()
   }
@@ -33,10 +58,28 @@ class UserViewModel: ObservableObject {
   init() {
     isUserIdValidPublisher
       .receive(on: RunLoop.main)
-      .map { valid in
-        valid ? "" : "양식이 올바르지 않습니다."
+      .map { result in
+        result ? "" : "아이디 양식이 올바르지 않습니다."
       }
       .assign(to: \.userIdMessage, on: self)
+      .store(in: &cancellableSet)
+    
+    isUserEmailValidPUblisher
+      .receive(on: RunLoop.main)
+      .map { result in
+        print(result)
+        return result ? "" : "이메일 양식이 올바르지 않습니다."
+      }
+      .assign(to: \.userEmailMessage, on: self)
+      .store(in: &cancellableSet)
+    
+    isUserPasswordValidPUblisher
+      .receive(on: RunLoop.main)
+      .map { result in
+        print(result)
+        return result ? "" : "패스워드는 대문자, 특수문자를 포함하여 최소 6글자 이상이여야 합니다."
+      }
+      .assign(to: \.userPasswordMessage, on: self)
       .store(in: &cancellableSet)
   }
 }

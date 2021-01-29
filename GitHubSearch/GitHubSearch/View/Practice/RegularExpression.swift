@@ -34,11 +34,16 @@ enum Regex {
   // 이메일
   @RegularyWrapper(filter: RegularExpression.email)
   static var email: String
+  
+  // 패스워드
+  @RegularyWrapper(filter: RegularExpression.password)
+  static var pw: String
 }
 
 private enum RegularExpression {
   static let id = "[a-zA-Z0-9가-힣ㄱ-ㅎㅏ-ㅣ\\s]"
   static let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+  static let password = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[$@$#!%*?&]).{6,}$"
 }
 
 
@@ -57,7 +62,7 @@ private struct RegexValid {
         print("Define some error handling")
         return false
       }
-    case RegularExpression.email:
+    case RegularExpression.email, RegularExpression.password:
       let regex = NSPredicate(format: "SELF MATCHES %@", filter)
       return regex.evaluate(with: newText)
     default:
