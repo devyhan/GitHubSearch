@@ -78,7 +78,7 @@ struct UnderlineTextField_Example: View {
 }
 #endif
 
- // MARK: - Preview
+// MARK: - Preview
 
 struct UnderlineTextField_Previews: PreviewProvider {
   static var previews: some View {
