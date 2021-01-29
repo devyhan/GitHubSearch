@@ -9,6 +9,23 @@ import Foundation
 
 // MARK: - Define namespace
 
+/**
+# Usage
+ ```
+ .map { someValue in
+  Regex.email = someValue
+  return Regex.$email
+ }
+ ```
+ @propertywrapper `(SE-0258)`
+ 
+## Discription
+ - get value
+    - `Regex.email = someValue`
+ - set value
+    - `return Regex.$email`
+ 
+*/
 enum Regex {
   // 아이디
   @RegularyWrapper(filter: RegularExpression.id)
