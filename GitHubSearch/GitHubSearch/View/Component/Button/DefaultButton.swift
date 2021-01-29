@@ -126,14 +126,14 @@ struct Example_Button02: View {
 #endif
 
 // MARK: - Preview
-
-struct DefaultButton_Previews: PreviewProvider {
-  static var previews: some View {
-    Group {
-      Example_Button01()
-        .previewLayout(.fixed(width: 400, height: 100))
-      Example_Button02()
-        .previewLayout(.fixed(width: 400, height: 100))
-    }
-  }
-}
+//
+//struct DefaultButton_Previews: PreviewProvider {
+//  static var previews: some View {
+//    Group {
+//      Example_Button01()
+//        .previewLayout(.fixed(width: 400, height: 100))
+//      Example_Button02()
+//        .previewLayout(.fixed(width: 400, height: 100))
+//    }
+//  }
+//}

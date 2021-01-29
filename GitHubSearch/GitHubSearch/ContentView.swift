@@ -86,6 +86,14 @@ struct ContentView: View {
           }
           
         }.listStyle(GroupedListStyle())
+        
+        Section(header: GroupHeader(title: "performance test")) {
+          NavigationLink(
+            destination: Test_01(),
+            label: {
+              Text("Test_01")
+            })
+        }.listStyle(GroupedListStyle())
       }
       .navigationBarTitle("SwiftUI")
     }
