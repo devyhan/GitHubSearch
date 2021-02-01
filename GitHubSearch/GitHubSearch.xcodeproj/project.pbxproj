@@ -11,6 +11,7 @@
 		7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C052025B65D9000118A70 /* UnderlineTextField.swift */; };
 		7E2C47FC25C3A0150028A019 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C47FB25C3A0150028A019 /* RegularExpression.swift */; };
 		7E2C481E25C3DDEE0028A019 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C053525B65EDC00118A70 /* UserViewModel.swift */; };
+		7E6B354F25C7FB5A009B3FE6 /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6B354725C7F958009B3FE6 /* DarkMode.swift */; };
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
 		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
 		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
@@ -47,6 +48,7 @@
 		7E0C052025B65D9000118A70 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
 		7E0C053525B65EDC00118A70 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7E2C47FB25C3A0150028A019 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegularExpression.swift; path = GitHubSearch/View/Practice/RegularExpression.swift; sourceTree = SOURCE_ROOT; };
+		7E6B354725C7F958009B3FE6 /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
 		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		7EC5F62625BFEACD00CC4D1A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 				7E0C052025B65D9000118A70 /* UnderlineTextField.swift */,
 			);
 			path = Underline;
+			sourceTree = "<group>";
+		};
+		7E6B354625C7F948009B3FE6 /* DarkMode */ = {
+			isa = PBXGroup;
+			children = (
+				7E6B354725C7F958009B3FE6 /* DarkMode.swift */,
+			);
+			path = DarkMode;
 			sourceTree = "<group>";
 		};
 		7EC5F61B25BFE9AC00CC4D1A /* Navigation */ = {
@@ -232,6 +242,7 @@
 		7ED0DF6225B5240E00C54C47 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				7E6B354625C7F948009B3FE6 /* DarkMode */,
 				7EC5F61B25BFE9AC00CC4D1A /* Navigation */,
 				7E0C051A25B65BB700118A70 /* TextField */,
 				7ED0DF6E25B550D900C54C47 /* Button */,
@@ -385,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E6B354F25C7FB5A009B3FE6 /* DarkMode.swift in Sources */,
 				7ED0DF6A25B52D9100C54C47 /* GitHubSearchApp.swift in Sources */,
 				7E2C481E25C3DDEE0028A019 /* UserViewModel.swift in Sources */,
 				7EC5F64B25C12EAB00CC4D1A /* ContentView.swift in Sources */,

@@ -14,8 +14,8 @@ struct GroupHeader: View {
   let title: String
   
   init(title: String,
-       backgroundColor: Color = Color.white,
-       forgroundColor: Color = Color.black) {
+       backgroundColor: Color = Semantic.backgroundBase,
+       forgroundColor: Color = Color.primary) {
     self.backgroundColor = backgroundColor
     self.forgroundColor = forgroundColor
     self.title = title
@@ -42,7 +42,7 @@ struct GroupHeader: View {
 
 struct ContentView: View {
   @State private var isPresented = false
-
+  
   var body: some View {
     NavigationView {
       List {
@@ -101,6 +101,15 @@ class Setting: ObservableObject {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    Group {
+      ContentView()
+        .previewDevice("iPhone 12 mini")
+        .previewDisplayName("iPhone 12 mini")
+      
+      ContentView()
+        .previewDevice("iPhone SE (2nd generation)")
+        .previewDisplayName("iPhone SE (2nd generation)")
+        .colorScheme(.dark)
+    }
   }
 }
