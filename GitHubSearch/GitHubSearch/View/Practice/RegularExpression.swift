@@ -12,31 +12,33 @@ import Foundation
 /**
 # Usage
  ```
- .map { someValue in
-  Regex.email = someValue
-  return Regex.$email
- }
+ AnyPublisher
+   .map { someValue in
+      Regex.email = someValue
+      return Regex.$email
+   }
+   ...
  ```
  @propertywrapper `(SE-0258)`
  
-## Discription
  - get value
     - `Regex.email = someValue`
  - set value
     - `return Regex.$email`
  
 */
+
 enum Regex {
   // 아이디
-  @RegularyWrapper(filter: RegularExpression.id) 
+  @RegexWrapper(filter: RegularExpression.id)
   static var id: String
   
   // 이메일
-  @RegularyWrapper(filter: RegularExpression.email)
+  @RegexWrapper(filter: RegularExpression.email)
   static var email: String
   
   // 패스워드
-  @RegularyWrapper(filter: RegularExpression.password)
+  @RegexWrapper(filter: RegularExpression.password)
   static var pw: String
 }
 
@@ -46,12 +48,24 @@ private enum RegularExpression {
   static let password = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[$@$#!%*?&]).{6,}$"
 }
 
+// MARK: - Propertywrapper
 
-// MARK: - Valid
-
-private struct RegexValid {
+@propertyWrapper
+struct RegexWrapper {
+  let filter: String?
+  var projectedValue: Bool = false
+  private var text: String?
+  
+  init(filter: String) {
+    self.filter = filter
+  }
+  
+  var wrappedValue: String {
+    get { text ?? "" }
+    set { projectedValue = RegexWrapper.checkString(newText: newValue, filter: self.filter ?? "") }
+  }
+  
   static func checkString(newText: String, filter: String) -> Bool {
-    
     switch filter {
     case RegularExpression.id:
       do {
@@ -69,25 +83,5 @@ private struct RegexValid {
       print("Define some error handling")
       fatalError()
     }
-  }
-}
-
-// MARK: - Propertywrapper
-
-@propertyWrapper
-struct RegularyWrapper {
-  let filter: String?
-  var projectedValue: Bool
-  private var text: String
-  
-  init(filter: String) {
-    self.text = ""
-    self.filter = filter
-    self.projectedValue = false
-  }
-  
-  var wrappedValue: String {
-    get { text }
-    set { projectedValue = RegexValid.checkString(newText: newValue, filter: self.filter ?? "") }
   }
 }

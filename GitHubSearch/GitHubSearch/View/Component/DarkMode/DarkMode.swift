@@ -22,8 +22,7 @@ struct DarkMode: View {
         Text("Some View")
           .frame(width: window.width - 20, height: 250)
           .background(Semantic.backgroundGroupBase)
-          
-        
+          .shadow(radius: 7)
         HStack {
           Image(systemName: "heart.fill")
             .foregroundColor(.red)
@@ -39,7 +38,6 @@ struct DarkMode: View {
       .frame(width: window.width - 20, height: 300)
       .padding()
       .background(Semantic.backgroundElevator)
-      .border(Color.black, width: 1)
 
     }
     .frame(width: window.width, height: window.height)
