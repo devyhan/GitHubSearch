@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import CryptoKit
 
 /**
  ```swift
  enum UserDefault {
-   @UserDefaultWrapper(key: "Key", defaultValue: false)
-   static var isLoggedIn: Bool
+ @UserDefaultWrapper(key: "Key", defaultValue: false)
+ static var isLoggedIn: Bool
  }
  
  ...
@@ -27,28 +28,28 @@ enum Key: String {
     case refreshToken = "x-refresh-token"
 }
 
-enum UserDefault {
-    @UserDefaultWrapper(key: Key.accessToken.rawValue, defaultValue: "")
+enum CriptoDefault {
+    @CriptoDefaultWrapper(key: Key.accessToken.rawValue, defaultValue: "")
     static var token: String
     
-    @UserDefaultWrapper(key: Key.refreshToken.rawValue, defaultValue: "")
+    @CriptoDefaultWrapper(key: Key.refreshToken.rawValue, defaultValue: "")
     static var refreshToken: String
 }
 
 @propertyWrapper
-struct UserDefaultWrapper<T> {
+struct CriptoDefaultWrapper {
     let key: String
-    let defaultValue: T
+    let defaultValue: String
     let `default` = UserDefaults.standard
     
-    var wrappedValue: T {
-        get { `default`.object(forKey: key) as? T ?? defaultValue }
-        set { `default`.set(newValue, forKey: key) }
+    var wrappedValue: String {
+        get { `default`.string(forKey: key) ?? defaultValue }
+        set { `default`.set(CriptoDefaultWrapper.isHashingData(item: newValue), forKey: key) }
     }
     
-    static func hashItem(item: String) -> Int {
-        var hasher = Hasher()
-        item.hash(into: &hasher)
-        return hasher.finalize()
+    static func isHashingData(item: String) -> String {
+        let hasingData = Data(item.utf8)
+        let hased = SHA512.hash(data: hasingData)
+        return hased.description
     }
 }
