@@ -86,7 +86,7 @@ struct ContentView: View {
                 }.listStyle(GroupedListStyle())
                 Section(header: GroupHeader(title: "feature")) {
                     NavigationLink(
-                        destination: CriptoKit(),
+                        destination: CriptoKitExample(),
                         label: {
                             Text("CriptoKit")
                         }
