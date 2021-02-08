@@ -8,6 +8,7 @@
 import os
 import SwiftUI
 import CoreLocation
+import CryptoKit
 
 @main
 struct GitHubSearchApp: App {

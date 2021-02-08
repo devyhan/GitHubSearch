@@ -12,6 +12,10 @@
 		7E2C47FC25C3A0150028A019 /* RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C47FB25C3A0150028A019 /* RegularExpression.swift */; };
 		7E2C481E25C3DDEE0028A019 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C053525B65EDC00118A70 /* UserViewModel.swift */; };
 		7E6B354F25C7FB5A009B3FE6 /* DarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6B354725C7F958009B3FE6 /* DarkMode.swift */; };
+		7E80CD5E25CD170A005B4E61 /* CriptoDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */; };
+		7E80CD6225CD179C005B4E61 /* CriptoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */; };
+		7E9AD1EE25D117C50067979D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */; };
+		7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */; };
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
 		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
 		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
@@ -49,6 +53,10 @@
 		7E0C053525B65EDC00118A70 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		7E2C47FB25C3A0150028A019 /* RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegularExpression.swift; path = GitHubSearch/View/Practice/RegularExpression.swift; sourceTree = SOURCE_ROOT; };
 		7E6B354725C7F958009B3FE6 /* DarkMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkMode.swift; sourceTree = "<group>"; };
+		7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoKit.swift; sourceTree = "<group>"; };
+		7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDefault.swift; sourceTree = "<group>"; };
+		7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainWrapper.swift; sourceTree = "<group>"; };
 		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		7EC5F62625BFEACD00CC4D1A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -119,6 +127,24 @@
 			path = DarkMode;
 			sourceTree = "<group>";
 		};
+		7E80CD5425CD164C005B4E61 /* CriptoKit */ = {
+			isa = PBXGroup;
+			children = (
+				7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */,
+				7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */,
+				7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */,
+			);
+			path = CriptoKit;
+			sourceTree = "<group>";
+		};
+		7E9AD1EC25D117940067979D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7EC5F61B25BFE9AC00CC4D1A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +203,7 @@
 		7ED0DF2D25B522DF00C54C47 /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7E9AD1EC25D117940067979D /* Extension */,
 				7ED0DF6125B5240900C54C47 /* Model */,
 				7ED0DF6025B5240400C54C47 /* ViewModel */,
 				7ED0DF5F25B523FF00C54C47 /* View */,
@@ -242,6 +269,7 @@
 		7ED0DF6225B5240E00C54C47 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				7E80CD5425CD164C005B4E61 /* CriptoKit */,
 				7E6B354625C7F948009B3FE6 /* DarkMode */,
 				7EC5F61B25BFE9AC00CC4D1A /* Navigation */,
 				7E0C051A25B65BB700118A70 /* TextField */,
@@ -399,9 +427,13 @@
 				7E6B354F25C7FB5A009B3FE6 /* DarkMode.swift in Sources */,
 				7ED0DF6A25B52D9100C54C47 /* GitHubSearchApp.swift in Sources */,
 				7E2C481E25C3DDEE0028A019 /* UserViewModel.swift in Sources */,
+				7E9AD1EE25D117C50067979D /* Bundle+Extension.swift in Sources */,
 				7EC5F64B25C12EAB00CC4D1A /* ContentView.swift in Sources */,
+				7E80CD6225CD179C005B4E61 /* CriptoKit.swift in Sources */,
+				7E80CD5E25CD170A005B4E61 /* CriptoDefault.swift in Sources */,
 				7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */,
 				7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */,
+				7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */,
 				7EC5F66025C1416400CC4D1A /* TabNavigation.swift in Sources */,
 				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
 				7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */,
