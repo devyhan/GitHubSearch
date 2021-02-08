@@ -36,7 +36,7 @@ struct CriptoKitExample: View {
             
             Spacer()
             
-            Text("saved keyChainValue value")
+            Text("Saved keychain value")
             Text("\(keyChainValue)")
                 .padding()
             
@@ -46,6 +46,12 @@ struct CriptoKitExample: View {
             tokenValue = CryptoDefault.token
             UserDefaultValue = "\(UserDefaults.standard.object(forKey: "x-access-token")!)"
             keyChainValue = "\(keyChain!)"
+            
+            // refresh token test
+            CryptoDefault.refreshToken = "IAMUNENCRYPTEDREFRESHTOKENVALUE"
+            print("✅ Refresh token testing ..")
+            print("Set userdefault value :", UserDefaults.standard.object(forKey: "x-refresh-token")!)
+            print("Refreshtoken :", CryptoDefault.refreshToken)
         }
         .onDisappear {
             CryptoDefault.token = ""

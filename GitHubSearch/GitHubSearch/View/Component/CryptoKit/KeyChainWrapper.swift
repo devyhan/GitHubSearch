@@ -46,9 +46,7 @@ final public class KeychainWrapper {
     }
     
     public var wrappedValue: String? {
-        get {
-            try! read()
-        }
+        get { try! read() }
         set {
             if let value = newValue {
                 if try! read() == nil {
