@@ -32,19 +32,3 @@ extension Bundle {
         return ""
     }
 }
-
-/**
- ```swift
- enum UserDefault {
-   @UserDefaultWrapper(key: "Key", defaultValue: false)
-   static var isLoggedIn: Bool
- }
- 
- ...
- 
- UserDefault.isLoggedIn         // set defaultValue
- UserDefault.isLoggedIn = true  // get value
- UserDefault.isLoggedIn         // set true
- ```
- */
-

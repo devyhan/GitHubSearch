@@ -15,6 +15,7 @@
 		7E80CD5E25CD170A005B4E61 /* CriptoDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */; };
 		7E80CD6225CD179C005B4E61 /* CriptoKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */; };
 		7E9AD1EE25D117C50067979D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */; };
+		7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */; };
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
 		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
 		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
@@ -55,6 +56,7 @@
 		7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoKit.swift; sourceTree = "<group>"; };
 		7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriptoDefault.swift; sourceTree = "<group>"; };
 		7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainWrapper.swift; sourceTree = "<group>"; };
 		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		7EC5F62625BFEACD00CC4D1A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				7E80CD5825CD16C4005B4E61 /* CriptoKit.swift */,
 				7E80CD5D25CD170A005B4E61 /* CriptoDefault.swift */,
+				7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */,
 			);
 			path = CriptoKit;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				7E80CD5E25CD170A005B4E61 /* CriptoDefault.swift in Sources */,
 				7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */,
 				7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */,
+				7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */,
 				7EC5F66025C1416400CC4D1A /* TabNavigation.swift in Sources */,
 				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
 				7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */,

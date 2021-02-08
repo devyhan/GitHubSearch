@@ -88,7 +88,7 @@ struct ContentView: View {
                     NavigationLink(
                         destination: CriptoKitExample(),
                         label: {
-                            Text("CriptoKit")
+                            Text("CryptoKit")
                         }
                     )
                     
