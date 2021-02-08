@@ -62,10 +62,10 @@ struct RegexWrapper {
   
   var wrappedValue: String {
     get { text ?? "" }
-    set { projectedValue = RegexWrapper.checkString(newText: newValue, filter: self.filter ?? "") }
+    set { projectedValue = checkString(newText: newValue, filter: self.filter ?? "") }
   }
   
-  static func checkString(newText: String, filter: String) -> Bool {
+  private func checkString(newText: String, filter: String) -> Bool {
     switch filter {
     case RegularExpression.id:
       do {
