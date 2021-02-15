@@ -42,32 +42,25 @@ struct GroupHeader: View {
 
 struct ContentView: View {
     @State private var isPresented = false
+    @EnvironmentObject private var alertCenter: AlertCenter
     
     var body: some View {
         NavigationView {
             List {
-                Section(header: GroupHeader(title: "Component")) {
+                Section(header: GroupHeader(title: "Example")) {
                     NavigationLink(
                         destination: ButtonView(),
                         label: {
                             Text("Button")
-                        })
+                        }
+                    )
+                    
                     NavigationLink(
                         destination: UnderlineTextField_Example(),
                         label: {
                             Text("TextField")
-                        })
-                    NavigationLink(
-                        destination: ButtonView(),
-                        label: {
-                            Text("Indicator")
-                        })
-                    
-                    NavigationLink(
-                        destination: ButtonView(),
-                        label: {
-                            Text("Login")
-                        })
+                        }
+                    )
                     
                     HStack {
                         Button("Navigation") {
@@ -83,18 +76,35 @@ struct ContentView: View {
                             .font(.system(size: 14))
                             .opacity(0.3)
                     }
-                }.listStyle(GroupedListStyle())
-                Section(header: GroupHeader(title: "feature")) {
+                    
                     NavigationLink(
                         destination: CryptoKitExample(),
                         label: {
                             Text("CryptoKit")
                         }
                     )
+                }.listStyle(GroupedListStyle())
+                Section(header: GroupHeader(title: "feature")) {
+                    NavigationLink(
+                        destination: AlertExample(),
+                        label: {
+                            Text("Alert")
+                        }
+                    )
+                    
+                    NavigationLink(
+                        destination: ButtonView(),
+                        label: {
+                            Text("Indicator")
+                        }
+                    )
                     
                 }.listStyle(GroupedListStyle())
             }
             .navigationBarTitle("SwiftUI")
+        }
+        .alert(isPresented: $alertCenter.isShowing) {
+            Alert(title: Text("Error"), message: Text("\(alertCenter.isMessaging)"), dismissButton: .default(Text("Dismiss")))
         }
     }
 }
