@@ -9,7 +9,7 @@ import SwiftUI
 import CryptoKit
 
 
-struct CriptoKitExample: View {
+struct CryptoKitExample: View {
     @State var tokenValue: String = ""
     @State var UserDefaultValue: String = ""
     @State var keyChainValue: String = ""
@@ -24,11 +24,17 @@ struct CriptoKitExample: View {
             
             Spacer()
             
+            Text("Access token sample")
+            Text("\(tokenValue)")
                 .padding()
 
             Spacer()
+            
+            Text("Set userdefault value")
             Text("\(UserDefaultValue)")
                 .padding()
+            
+            Spacer()
             
             Text("Saved keychain value")
             Text("\(keyChainValue)")
@@ -36,6 +42,9 @@ struct CriptoKitExample: View {
             
         }
         .onAppear {
+            let symmetricKey = SymmetricKey(size: .bits256) // 대칭키 발급
+            Keychain.symmetricKey = symmetricKey.withUnsafeBytes { Data(Array($0)).base64EncodedString() } // 발급받은 대칭키 keychain에 저장
+            
             CryptoDefault.token = "IAMUNENCRYPTEDACCESSTOKENVALUE"
             tokenValue = CryptoDefault.token
             UserDefaultValue = "\(UserDefaults.standard.object(forKey: "x-access-token")!)"
@@ -58,6 +67,6 @@ struct CriptoKitExample: View {
 
 struct CriptoKit_Previews: PreviewProvider {
     static var previews: some View {
-        CriptoKitExample()
+        CryptoKitExample()
     }
 }

@@ -8,12 +8,17 @@
 import Foundation
 import Security
 
+enum Keychain {
+    @KeychainWrapper(account: Bundle.bundleIdentifier)
+    static var symmetricKey: String?
+}
+
 private func throwIfNotZero(_ status: OSStatus) throws {
     guard status != 0 else { return }
     throw KeychainError.keychainError(status: status)
 }
 
-public enum KeychainError: Error {
+enum KeychainError: Error {
     case invalidData
     case keychainError(status: OSStatus)
 }
@@ -27,7 +32,7 @@ extension Dictionary {
 }
 
 @propertyWrapper
-final public class KeychainWrapper {
+struct KeychainWrapper {
     private let service: String
     
     public init(account: String) {

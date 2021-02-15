@@ -14,45 +14,57 @@ enum Key: String {
 }
 
 enum CryptoDefault {
-    @CryptoDefaultWrapper(key: Key.accessToken.rawValue, defaultValue: "")
+    @CryptoDefaultWrapper(userDefaultKey: Key.accessToken.rawValue, defaultValue: "")
     static var token: String
     
-    @CryptoDefaultWrapper(key: Key.refreshToken.rawValue, defaultValue: "")
+    @CryptoDefaultWrapper(userDefaultKey: Key.refreshToken.rawValue, defaultValue: "")
     static var refreshToken: String
+}
+
+enum CipherError: Error {
+    case encrypted
+    case decrypted
 }
 
 @propertyWrapper
 struct CryptoDefaultWrapper {
-    @KeychainWrapper(account: Bundle.bundleIdentifier)
-    var keyChain: String?
-    
-    let key: String
+    let userDefaultKey: String
     let defaultValue: String
     let `default` = UserDefaults.standard
-    var values: String?
     
     var wrappedValue: String {
-        get { isDecryptedData(key: key) } // userdefault에 저장된 암호화된 데이터를 string으로 출력
-        set { `default`.set(isEncryptedData(data: newValue), forKey: key) } // String을 받아와 userdefault에 암호화 데이터 저장
+        get { isDecryptedData(key: userDefaultKey) }
+        set { `default`.set(isEncryptedData(data: newValue), forKey: userDefaultKey) }
     }
     
     private func isEncryptedData(data: String) -> Data {
-        let data = Data(data.utf8) // userdefault에 들어온 값
-        let symmetricKey = SymmetricKey(size: .bits256) // SymmetricKey 발급
-        let sealedBoxData = try! ChaChaPoly.seal(data, using: symmetricKey).combined
+        guard let keyData = Data(base64Encoded: Keychain.symmetricKey ?? "") else { return Data() }
+        let symmetricKey = SymmetricKey(data: keyData)
+        let data = Data(data.utf8)
         
-        keyChain = symmetricKey.withUnsafeBytes { Data(Array($0)).base64EncodedString() } // SymmetricKey를 키체인에 string타입으로 저장하기 위함
+        do {
+            let sealedBoxData = try ChaChaPoly.seal(data, using: symmetricKey).combined
+            return sealedBoxData
+        } catch {
+            print("❗️Error \(CipherError.encrypted.localizedDescription)", error)
+        }
         
-        return sealedBoxData
+        return Data()
     }
  
     private func isDecryptedData(key: String) -> String {
-        guard let keyData = Data(base64Encoded: keyChain ?? "") else { return "" } // 다시 SymmetricKey타입으로 만들기위해 Data타입저장
-        let data = `default`.object(forKey: key) as! Data
-        let sealedBox = try! ChaChaPoly.SealedBox(combined: data)
+        guard let keyData = Data(base64Encoded: Keychain.symmetricKey ?? "") else { return "" }
+        guard let data = `default`.object(forKey: key) as? Data else { return "" }
         let retrievedKey = SymmetricKey(data: keyData)
-        let decryptedData = try! ChaChaPoly.open(sealedBox, using: retrievedKey)
         
-        return String(decoding: decryptedData, as: UTF8.self)
+        do {
+            let sealedBox = try ChaChaPoly.SealedBox(combined: data)
+            let decryptedData = try ChaChaPoly.open(sealedBox, using: retrievedKey)
+            return String(decoding: decryptedData, as: UTF8.self)
+        } catch {
+            print("❗️Error \(CipherError.decrypted.localizedDescription)", error)
+        }
+        
+        return ""
     }
 }
