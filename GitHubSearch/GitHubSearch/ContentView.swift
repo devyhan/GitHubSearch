@@ -51,23 +51,15 @@ struct ContentView: View {
                         destination: ButtonView(),
                         label: {
                             Text("Button")
-                        })
+                        }
+                    )
+                    
                     NavigationLink(
                         destination: UnderlineTextField_Example(),
                         label: {
                             Text("TextField")
-                        })
-                    NavigationLink(
-                        destination: ButtonView(),
-                        label: {
-                            Text("Indicator")
-                        })
-                    
-                    NavigationLink(
-                        destination: ButtonView(),
-                        label: {
-                            Text("Login")
-                        })
+                        }
+                    )
                     
                     HStack {
                         Button("Navigation") {
@@ -96,6 +88,13 @@ struct ContentView: View {
                         destination: AlertExample(),
                         label: {
                             Text("Alert")
+                        }
+                    )
+                    
+                    NavigationLink(
+                        destination: ButtonView(),
+                        label: {
+                            Text("Indicator")
                         }
                     )
                     
