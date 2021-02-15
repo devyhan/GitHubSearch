@@ -83,12 +83,19 @@ struct ContentView: View {
                             .font(.system(size: 14))
                             .opacity(0.3)
                     }
-                }.listStyle(GroupedListStyle())
-                Section(header: GroupHeader(title: "feature")) {
+                    
                     NavigationLink(
                         destination: CryptoKitExample(),
                         label: {
                             Text("CryptoKit")
+                        }
+                    )
+                }.listStyle(GroupedListStyle())
+                Section(header: GroupHeader(title: "feature")) {
+                    NavigationLink(
+                        destination: AlertExample(),
+                        label: {
+                            Text("Alert")
                         }
                     )
                     
