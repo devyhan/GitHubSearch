@@ -8,8 +8,49 @@
 import SwiftUI
 
 struct AlertExample: View {
+    @State private var defaultAlert = false
+    @State private var actionAlert = false
+    
+    @EnvironmentObject private var alertCenter: AlertCenter
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            
+            Text("Default Alert")
+            Button (action: {
+                self.defaultAlert = true
+            }) {
+                Text("Show Alert")
+            }
+            .alert(isPresented: $defaultAlert) {
+                Alert(title: Text("Title"), message: Text("This is a alert message"), dismissButton: .default(Text("Dismiss")))
+            }
+            
+            Spacer()
+            
+            Text("Action Alert")
+            Button(action: {
+                self.actionAlert = true
+                alertCenter.isShowing = true
+            }) {
+                Text("Show Alert")
+            }
+            .alert(isPresented: $actionAlert) {
+                Alert(title: Text("Title"), message: Text("Message"), primaryButton: .destructive(Text("Primary"), action: {
+                    print("Action")
+                }), secondaryButton: .cancel())
+            }
+            
+            Spacer()
+            
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                alertCenter.isShowing = true
+                alertCenter.isMessaging = "test"
+            }
+        }
     }
 }
 

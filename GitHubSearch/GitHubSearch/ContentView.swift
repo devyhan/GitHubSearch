@@ -42,11 +42,12 @@ struct GroupHeader: View {
 
 struct ContentView: View {
     @State private var isPresented = false
+    @EnvironmentObject private var alertCenter: AlertCenter
     
     var body: some View {
         NavigationView {
             List {
-                Section(header: GroupHeader(title: "Component")) {
+                Section(header: GroupHeader(title: "Example")) {
                     NavigationLink(
                         destination: ButtonView(),
                         label: {
@@ -101,6 +102,9 @@ struct ContentView: View {
                 }.listStyle(GroupedListStyle())
             }
             .navigationBarTitle("SwiftUI")
+        }
+        .alert(isPresented: $alertCenter.isShowing) {
+            Alert(title: Text("Error"), message: Text("\(alertCenter.isMessaging)"), dismissButton: .default(Text("Dismiss")))
         }
     }
 }
