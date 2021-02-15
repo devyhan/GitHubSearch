@@ -8,17 +8,9 @@
 import Foundation
 
 class AlertCenter: ObservableObject {
-    var isShowing: Bool = false {
-        willSet {
-            print("🛠", newValue)
-            objectWillChange.send()
-        }
-    }
     
-    var isMessaging: String = "default message" {
-        willSet {
-            print("🛠", newValue)
-            objectWillChange.send()
-        }
-    }
+    // output
+    @Published var isShowing: Bool = false
+    @Published var isMessaging: String = "defalult message"
+    
 }
