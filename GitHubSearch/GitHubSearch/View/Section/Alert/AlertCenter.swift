@@ -14,3 +14,4 @@ class AlertCenter: ObservableObject {
     @Published var isMessaging: String = "defalult message"
     
 }
+
