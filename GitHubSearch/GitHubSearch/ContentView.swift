@@ -99,6 +99,13 @@ struct ContentView: View {
                         }
                     )
                     
+                    NavigationLink(
+                        destination: BezierPathExample(),
+                        label: {
+                            Text("BezierPath")
+                        }
+                    )
+                    
                 }.listStyle(GroupedListStyle())
             }
             .navigationBarTitle("SwiftUI")
