@@ -22,64 +22,15 @@ struct BezierPathExample: View {
                 .font(.title)
                 .frame(width: window.width, alignment: .leading)
                 .padding(.leading, 30)
-            HGridView()
+            BezierHGridView()
                 .frame(height: 130)
             
             Text("VGrid")
                 .font(.title)
                 .frame(width: window.width, alignment: .leading)
                 .padding(.leading, 30)
-            VGridView()
+            BezierVGridView()
                 .frame(height: window.height - 400)
-        }
-    }
-}
-
-struct HGridView: View {
-    let items = 1...18
-
-    let rows = [
-        GridItem(.fixed(130)),
-    ]
-
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            LazyHGrid(rows: rows, alignment: .center, spacing: 20) {
-                ForEach(items, id: \.self) { item in
-                    VStack {
-                        BezierPathShape(lengthValue: 100, image: "cafe-\(item)")
-                            .padding(.trailing, 110)
-                        Text("cafe\(item)")
-                    }
-                }
-            }.padding(.leading, 30)
-        }
-    }
-}
-
-struct VGridView: View {
-    let items = 1...20
-
-    let columns = [
-        GridItem(.fixed(130)),
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
-
-    var body: some View {
-        ScrollView(showsIndicators: false) {
-            LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(items, id: \.self) { item in
-                    VStack {
-                        BezierPathShape(lengthValue: 100, image: "coffee-\(item)")
-                            .padding(.bottom, 110)
-                            
-                        Text("coffee\(item)")
-                            .padding(.trailing, 30)
-                            
-                    }
-                }
-            }.padding(.leading, 30)
         }
     }
 }
