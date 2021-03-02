@@ -83,6 +83,20 @@ struct ContentView: View {
                             Text("CryptoKit")
                         }
                     )
+                    
+                    NavigationLink(
+                        destination: BezierPathExample(),
+                        label: {
+                            Text("BezierPath")
+                        }
+                    )
+                    
+                    NavigationLink(
+                        destination: MapView(),
+                        label: {
+                            Text("MapView")
+                        }
+                    )
                 }.listStyle(GroupedListStyle())
                 Section(header: GroupHeader(title: "feature")) {
                     NavigationLink(
@@ -100,16 +114,9 @@ struct ContentView: View {
                     )
                     
                     NavigationLink(
-                        destination: BezierPathExample(),
+                        destination: ColorSet(),
                         label: {
-                            Text("BezierPath")
-                        }
-                    )
-                    
-                    NavigationLink(
-                        destination: MapView(),
-                        label: {
-                            Text("MapView")
+                            Text("ColorSet")
                         }
                     )
                     

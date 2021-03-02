@@ -25,6 +25,9 @@
 		7E999DBD25DA256100316773 /* AlertCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E999DBC25DA256100316773 /* AlertCenter.swift */; };
 		7E9AD1EE25D117C50067979D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */; };
 		7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */; };
+		7EBF78EA25EDE4320019DE8C /* ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF78E925EDE4320019DE8C /* ColorSet.swift */; };
+		7EBF78F225EE020F0019DE8C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF78F125EE020F0019DE8C /* Color+Extension.swift */; };
+		7EBF790025EE0D6D0019DE8C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBF78FF25EE0D6D0019DE8C /* Color.swift */; };
 		7EC5F62725BFEACD00CC4D1A /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62625BFEACD00CC4D1A /* FirstView.swift */; };
 		7EC5F62F25BFEAD500CC4D1A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */; };
 		7EC5F63525BFF39200CC4D1A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC5F63425BFF39200CC4D1A /* TabController.swift */; };
@@ -75,6 +78,9 @@
 		7E999DBC25DA256100316773 /* AlertCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCenter.swift; sourceTree = "<group>"; };
 		7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		7E9AD1F525D135D10067979D /* KeyChainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainWrapper.swift; sourceTree = "<group>"; };
+		7EBF78E925EDE4320019DE8C /* ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSet.swift; sourceTree = "<group>"; };
+		7EBF78F125EE020F0019DE8C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		7EBF78FF25EE0D6D0019DE8C /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Color.swift; path = GitHubSearch/Extension/Color.swift; sourceTree = SOURCE_ROOT; };
 		7EC5F61D25BFEA0100CC4D1A /* TabNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigation.swift; sourceTree = "<group>"; };
 		7EC5F62625BFEACD00CC4D1A /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		7EC5F62E25BFEAD500CC4D1A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
@@ -189,8 +195,17 @@
 			isa = PBXGroup;
 			children = (
 				7E9AD1ED25D117C50067979D /* Bundle+Extension.swift */,
+				7EBF78F125EE020F0019DE8C /* Color+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7EBF78E825EDE41B0019DE8C /* ColorSet */ = {
+			isa = PBXGroup;
+			children = (
+				7EBF78E925EDE4320019DE8C /* ColorSet.swift */,
+			);
+			path = ColorSet;
 			sourceTree = "<group>";
 		};
 		7EC5F61B25BFE9AC00CC4D1A /* Navigation */ = {
@@ -310,6 +325,7 @@
 		7ED0DF6125B5240900C54C47 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7EBF78FF25EE0D6D0019DE8C /* Color.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +333,7 @@
 		7ED0DF6225B5240E00C54C47 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				7EBF78E825EDE41B0019DE8C /* ColorSet */,
 				7E43D5E225E777CA00984FC5 /* MapView */,
 				7E43D59525E617E100984FC5 /* BezierPath */,
 				7E999DB325DA13C700316773 /* Alert */,
@@ -488,8 +505,11 @@
 				7E80CD5E25CD170A005B4E61 /* CryptoDefaultWrapper.swift in Sources */,
 				7E0C052925B65DA900118A70 /* HorizontalLine.swift in Sources */,
 				7E43D5E425E777D800984FC5 /* MapView.swift in Sources */,
+				7EBF78EA25EDE4320019DE8C /* ColorSet.swift in Sources */,
 				7E0C053025B65DBA00118A70 /* UnderlineTextField.swift in Sources */,
+				7EBF78F225EE020F0019DE8C /* Color+Extension.swift in Sources */,
 				7E9AD1F625D135D10067979D /* KeyChainWrapper.swift in Sources */,
+				7EBF790025EE0D6D0019DE8C /* Color.swift in Sources */,
 				7EC5F66025C1416400CC4D1A /* TabNavigation.swift in Sources */,
 				7E43D5B625E7539600984FC5 /* BezierHGridView.swift in Sources */,
 				7ED0DF7025B5522B00C54C47 /* DefaultButton.swift in Sources */,
