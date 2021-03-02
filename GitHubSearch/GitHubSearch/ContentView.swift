@@ -106,6 +106,13 @@ struct ContentView: View {
                         }
                     )
                     
+                    NavigationLink(
+                        destination: MapView(),
+                        label: {
+                            Text("MapView")
+                        }
+                    )
+                    
                 }.listStyle(GroupedListStyle())
             }
             .navigationBarTitle("SwiftUI")

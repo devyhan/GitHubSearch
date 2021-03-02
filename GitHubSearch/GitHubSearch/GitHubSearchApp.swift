@@ -57,7 +57,7 @@ enum Semantic {
 
 extension UIColor {
   
-  // MARK: - Basic Color Set
+  // MARK: - Basic Color Setㅊ
   /// 베이직 컬러는 컬러 팔레트의 개념으로 명도 혹은 기능과 서비스에 따라 정의
   static var black005: UIColor {
     return UIColor(named: "Black01")!
