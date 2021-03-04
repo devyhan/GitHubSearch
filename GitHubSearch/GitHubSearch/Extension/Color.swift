@@ -14,11 +14,11 @@ enum Basic {
     static let black02: Color = Color(named: "black-2")
     static let black03: Color = Color(named: "black-3")
     static let black04: Color = Color(named: "black-4")
-    static let black05: Color = Color(named: "black-5") 
+    static let black05: Color = Color(named: "black-5")
     static let black06: Color = Color(named: "black-6")
 }
  
-// MARK: - Semantic Color Set
+// MARK: - Semantic Color Set 
 /// 시멘틱 컬러는 컬러 팔레트의 개념인 베이직 컬러를 가져와서 사용
 /// 사용되는 목적과 UI에 따라 네이밍하고 적용하는 컬러
 enum Semantic {
