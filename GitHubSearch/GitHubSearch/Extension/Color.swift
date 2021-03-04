@@ -14,7 +14,7 @@ enum Basic {
     static let black02: Color = Color(named: "black-2")
     static let black03: Color = Color(named: "black-3")
     static let black04: Color = Color(named: "black-4")
-    static let black05: Color = Color(named: "black-5")
+    static let black05: Color = Color(named: "black-5") 
     static let black06: Color = Color(named: "black-6")
 }
  
