@@ -23,6 +23,6 @@ enum Basic {
 /// 사용되는 목적과 UI에 따라 네이밍하고 적용하는 컬러
 enum Semantic {
     static let backgroundBase: Color = Color(light: .white, dark: Basic.black01)
-    static let backgroundElevator: Color = Color(light: .white, dark: Basic.black02)
+    static let backgroundElevator: Color = Color(light: .white, dark: Basic.black02) 
     static let backgroundGroupBase: Color = Color(light: .white, dark: Basic.black03)
 }
